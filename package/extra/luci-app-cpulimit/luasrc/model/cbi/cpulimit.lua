@@ -5,7 +5,7 @@ s.template = "cbi/tblsection"
 s.anonymous = true
 s.addremove = true
 
-enable = s:option(Flag, "enabled", translate("enable", "enable"))
+enable = s:option(Flag, "enabled", translate("enable"))
 enable.optional = false
 enable.rmempty = false
 
@@ -20,6 +20,10 @@ exename.default = ""
 for psvalue in shellpipe:lines() do
 	exename:value(psvalue)
 end
+
+includechildren = s:option(Flag, "includechildren", translate("include children"), translate("limit also the children processes. THIS MAY LEAD TO HIGH LOAD OF CPULIMIT!"))
+includechildren.optional = false
+includechildren.rmempty = false
 
 limit = s:option(Value, "limit", translate("limit (%)"))
 limit.optional = false

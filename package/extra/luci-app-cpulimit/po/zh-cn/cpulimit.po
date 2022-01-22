@@ -18,3 +18,9 @@ msgstr "可执行文件名。切勿包含路径！"
 
 msgid "limit (%)"
 msgstr "使用率限制 (%)"
+
+msgid "include children"
+msgstr "包含子进程"
+
+msgid "limit also the children processes. THIS MAY LEAD TO HIGH LOAD OF CPULIMIT!"
+msgstr "同时限制子进程。可能会导致cpulimit高负载！"
